@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std;
 
+#define DELIMITER "\n---------------------------------------------------\n"
+
 const int ROWS = 4;	//Количество строк двумерного массива
 const int COLS = 5;	//Количество элементов строки
 
@@ -38,6 +40,12 @@ void main()
 	int Crr[ROWS][COLS];
 	FillRand(Crr, ROWS, COLS);
 	Print(Crr, ROWS, COLS);
+	Sort(Crr, ROWS, COLS);
+	cout << DELIMITER << endl;
+	Print(Crr, ROWS, COLS);
+
+	double Drr[ROWS][COLS];
+	//FillRand(Drr, ROWS, COLS);
 }
 
 void FillRand(int Arr[], const int n)
@@ -119,7 +127,33 @@ void Sort(int Arr[], const int n)
 
 void Sort(int Arr[ROWS][COLS], const int ROWS, const int COLS)
 {
-	
+	int iterations = 0;
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			for (int k = i; k < ROWS; k++)
+			{
+				//int l;
+
+				//if (k == i) l = j + 1;else l = 0;
+					//(k == i)?l = j + 1 : l = 0;
+				//l = (k == i) ? j + 1 : 0;
+				cout << typeid(k == i ? j + 1 : 0.).name() << endl;
+				for (int l = k == i ? j + 1 : 0.; l < COLS; l++)
+				{
+					if (Arr[k][l] < Arr[i][j])
+					{
+						int buffer = Arr[i][j];
+						Arr[i][j] = Arr[k][l];
+						Arr[k][l] = buffer;
+					}
+					iterations++;
+				}
+			}
+		}
+	}
+	cout << "Массив отсортирован за " << iterations << " итераций\n";
 }
 
 int  Sum(int Arr[], const int n)
@@ -142,3 +176,12 @@ double Avg(int Arr[], const int n)
 //	int min = Arr[0];
 //
 //}
+
+//Repository
+
+/*
+
+template<typename T>
+template (шаблон)
+
+*/
