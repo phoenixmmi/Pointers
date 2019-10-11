@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Arrays", "Arrays\Arrays.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Recursion", "Recursion\Recursion.vcxproj", "{83F598C8-DB76-4005-B74E-AB3E8BBD566B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "XO", "XO\XO.vcxproj", "{2640529C-4239-49CA-9E8C-B8E312DE4F15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{83F598C8-DB76-4005-B74E-AB3E8BBD566B}.Release|x64.Build.0 = Release|x64
 		{83F598C8-DB76-4005-B74E-AB3E8BBD566B}.Release|x86.ActiveCfg = Release|Win32
 		{83F598C8-DB76-4005-B74E-AB3E8BBD566B}.Release|x86.Build.0 = Release|Win32
+		{2640529C-4239-49CA-9E8C-B8E312DE4F15}.Debug|x64.ActiveCfg = Debug|x64
+		{2640529C-4239-49CA-9E8C-B8E312DE4F15}.Debug|x64.Build.0 = Debug|x64
+		{2640529C-4239-49CA-9E8C-B8E312DE4F15}.Debug|x86.ActiveCfg = Debug|Win32
+		{2640529C-4239-49CA-9E8C-B8E312DE4F15}.Debug|x86.Build.0 = Debug|Win32
+		{2640529C-4239-49CA-9E8C-B8E312DE4F15}.Release|x64.ActiveCfg = Release|x64
+		{2640529C-4239-49CA-9E8C-B8E312DE4F15}.Release|x64.Build.0 = Release|x64
+		{2640529C-4239-49CA-9E8C-B8E312DE4F15}.Release|x86.ActiveCfg = Release|Win32
+		{2640529C-4239-49CA-9E8C-B8E312DE4F15}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
