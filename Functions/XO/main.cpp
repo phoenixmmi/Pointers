@@ -4,18 +4,21 @@ using namespace std;
 
 #define HORIZ_OFFSET "\t\t\t\t\t\t"
 
-void PrintField(char Field[], const int n);
-void Move(char Field[], const int n);
+void PrintField(char Field[], const int n, char Player);
+void Move(char Field[], const int n, char Player);
+void Check(char Field[], const int n, char Player);
 
 void main()
 {
 	setlocale(LC_ALL, "Rus");
 	const int SIZE = 9;
 	char Field[SIZE] = {};	//Игровое поле
-	PrintField(Field, SIZE);
+	PrintField(Field, SIZE, '0');
+	cout << "Еще разочек? (y || Y)";
+	if (_getch() == 'y')main();
 }
 
-void PrintField(char Field[], const int n)
+void PrintField(char Field[], const int n, char Player)
 {
 	system("CLS");
 	cout << "\n\n\n\n\n\n\n";
@@ -32,16 +35,59 @@ void PrintField(char Field[], const int n)
 		cout << HORIZ_OFFSET;
 		if (i != 0)cout << "--- --- ---" << endl;
 	}
-	Move(Field, n);
+	Check(Field, n, Player);
 }
 
-void Move(char Field[], const int n)
+void Move(char Field[], const int n, char Player)
 {
 	char key;
-
-	key = _getch();
-	if (key == 27)return;
 	//cout << (int)key << endl;
-	Field[key - 49] = key;
-	PrintField(Field, n);
+	bool busy;
+	bool miss;
+	do
+	{
+		busy = false;
+		do
+		{
+			miss = false;
+			key = _getch();
+			if (key == 27)return;
+			if (key < '1' || key > '9')miss = true;
+			if (miss) cout << "Вы не попали в поле\a" << endl;
+		} while (miss);
+		if (Field[key - 49] == 0)Field[key - 49] = Player;
+		else
+		{
+			cout << "Cell busy\a" << endl;
+			busy = true;
+		}
+	} while (busy); 
+
+
+	/*if (Player == 'X')PrintField(Field, n, '0');
+	else PrintField(Field, n, 'X');*/
+	PrintField(Field, n, Player);
+}
+
+void Check(char Field[], const int n, char Player)
+{
+	bool game_over = false;
+		 if (Field[0] == Field[4] && Field[4] == Field[8] && Field[8] != 0) game_over = true;
+	else if (Field[2] == Field[4] && Field[4] == Field[6] && Field[6] != 0) game_over = true;
+
+	else if (Field[0] == Field[1] && Field[1] == Field[2] && Field[2] != 0) game_over = true;
+	else if (Field[3] == Field[4] && Field[4] == Field[5] && Field[5] != 0) game_over = true;
+	else if (Field[6] == Field[7] && Field[7] == Field[8] && Field[8] != 0) game_over = true;
+
+	else if (Field[0] == Field[3] && Field[3] == Field[6] && Field[6] != 0) game_over = true;
+	else if (Field[1] == Field[4] && Field[4] == Field[7] && Field[7] != 0) game_over = true;
+	else if (Field[2] == Field[5] && Field[5] == Field[8] && Field[8] != 0) game_over = true;
+
+		 if (game_over)
+		 {
+			 cout << "Player " << Player << " wins." << endl;
+			 return;
+		 }
+		 if(Player == 'X')Move(Field, n, '0');
+		 else Move(Field, n, 'X');
 }
