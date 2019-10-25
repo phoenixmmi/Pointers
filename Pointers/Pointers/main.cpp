@@ -49,3 +49,14 @@ void main()
 	cout << endl;
 	//+, -, ++, --;
 }
+
+/*
+type function(parameter1, parameter2, ...)
+{
+	
+}
+
+1. 
+2. NUll, INT_MAX, int(), ...
+
+*/
