@@ -13,7 +13,7 @@ using namespace std;
 //	return sum;
 //}
 
-int sum(int value ...)
+template<typename T>int sum(T value ...)
 {
 	int sum = 0;
 	int* p_value = &value;
@@ -29,6 +29,3 @@ void main()
 	cout << sum(3, 5, 8, 13, 21, 34, 0) << endl;
 }
 
-/*
-
-*/
