@@ -139,7 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BaseFunctions.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Memory.cpp" />
+    <ClCompile Include="MultidimensionalArrays.cpp" />
+    <ClCompile Include="SimpleArrays.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Functions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
