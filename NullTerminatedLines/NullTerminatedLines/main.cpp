@@ -13,6 +13,9 @@ void RemoveSpaces(char str[]);
 bool isNumber(char str[]);
 int StrToInt(char str[]);
 int culk(char str[]);
+bool isBin(char str[]);
+int BinToDec(char str[]);
+void dec_to_bin(int dec);
 
 
 
@@ -39,12 +42,16 @@ void main()
 	Capitalize(str);		//ѕреобразует все первые буквы слов в верхний регистр
 	cout << str << endl;
 	Shrink(str);			//”бирает лишние пробелы
-	cout << str << endl;*/
+	cout << str << endl;
 	cout << isPalindrome(str) << endl;	//ќпредел€ет,€вл€етс€ ли строка палиндромом-
 
 	cout << isNumber(str) << endl;
 
 	int num = StrToInt(str);
+	cout << num << endl;*/
+	cout << isBin(str) << endl;
+
+	int num = BinToDec(str);
 	cout << num << endl;
 
 }
@@ -184,4 +191,45 @@ int StrToInt(char str[])
 	}
 	return num;
 
+}
+bool isBin(char str[])
+{
+	for (int i = 0; str[i]; i++)
+	{
+		if (str[i] != '0' && str[i] != '1') return false;
+	}
+	return true;
+}
+
+int BinToDec(char str[])
+{
+	int n = StrLen(str);
+	int num = 0;
+	int two = 1;
+	if (isBin(str))
+	{
+		for (int i = n - 1; i >= 0; i--)
+		{
+		}
+
+	}
+	/*for (int i = 0;str[0] ; i++)
+	{
+	num = str[i] * two;
+	two *= 2;
+	   }*/
+		/*	if (str[i] == str[0] && str[0] == '48')
+			{
+				num += 0 * 2 + 0;
+			}
+			else if (str[i] == str[0] && str[0] == '49')
+			{
+				num += 0 * 2 + 1;
+			}
+
+			if (!str[0])
+			{
+				num = num * 2 + str[i]-48;
+			}*/
+	return num;
 }
