@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "numericSystems", "numericSy
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StandardStrFunctions", "StandardStrFunctions\StandardStrFunctions.vcxproj", "{5AB94F83-95F6-4CF6-BF8B-8F7884383D4D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Files", "Files\Files.vcxproj", "{F4FE5F0F-BD37-482F-9388-9C16DFB407F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{5AB94F83-95F6-4CF6-BF8B-8F7884383D4D}.Release|x64.Build.0 = Release|x64
 		{5AB94F83-95F6-4CF6-BF8B-8F7884383D4D}.Release|x86.ActiveCfg = Release|Win32
 		{5AB94F83-95F6-4CF6-BF8B-8F7884383D4D}.Release|x86.Build.0 = Release|Win32
+		{F4FE5F0F-BD37-482F-9388-9C16DFB407F2}.Debug|x64.ActiveCfg = Debug|x64
+		{F4FE5F0F-BD37-482F-9388-9C16DFB407F2}.Debug|x64.Build.0 = Debug|x64
+		{F4FE5F0F-BD37-482F-9388-9C16DFB407F2}.Debug|x86.ActiveCfg = Debug|Win32
+		{F4FE5F0F-BD37-482F-9388-9C16DFB407F2}.Debug|x86.Build.0 = Debug|Win32
+		{F4FE5F0F-BD37-482F-9388-9C16DFB407F2}.Release|x64.ActiveCfg = Release|x64
+		{F4FE5F0F-BD37-482F-9388-9C16DFB407F2}.Release|x64.Build.0 = Release|x64
+		{F4FE5F0F-BD37-482F-9388-9C16DFB407F2}.Release|x86.ActiveCfg = Release|Win32
+		{F4FE5F0F-BD37-482F-9388-9C16DFB407F2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

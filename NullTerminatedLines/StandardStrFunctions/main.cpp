@@ -39,9 +39,15 @@ void main()
 
 	for (int i = 0; i < sizeof(words) / sizeof(const char*); i++)
 	{
-		for (int j = 0;j < i; j++)
+		for (int j = i; j < sizeof(words) / sizeof(const char*); j++)
 		{
-			
+			if (strcmp(words[i], words[j]) > 0)std::swap(words[i], words[j]);
+
 		}
 	}
+	for (int i = 0; i < sizeof(words) / sizeof(const char*); i++)
+	{
+		std::cout << words[i] << std::endl;
+	}
+	std::cout << std::endl;
 }
