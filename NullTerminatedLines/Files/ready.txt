@@ -1,0 +1,70 @@
+host- 1
+{
+	hardware - ethernet	00:11:22:bc:5f:9d;
+	fixed-address	10.8.13.21.1;
+}
+host- 2
+{
+	hardware - ethernet	00:11:22:bd:15:77;
+	fixed-address	10.8.13.21.2;
+}
+host- 3
+{
+	hardware - ethernet	00:11:22:be:b9:7c;
+	fixed-address	10.8.13.21.3;
+}
+host- 4
+{
+	hardware - ethernet	00:11:22:b2:b4:98;
+	fixed-address	10.8.13.21.4;
+}
+host- 5
+{
+	hardware - ethernet	00:11:22:bc:ec:fb;
+	fixed-address	10.8.13.21.5;
+}
+host- 6
+{
+	hardware - ethernet	00:11:22:b2:36:b8;
+	fixed-address	10.8.13.21.6;
+}
+host- 7
+{
+	hardware - ethernet	00:11:22:bc:b7:ef;
+	fixed-address	10.8.13.21.7;
+}
+host- 8
+{
+	hardware - ethernet	00:11:22:be:b8:78;
+	fixed-address	10.8.13.21.8;
+}
+host- 9
+{
+	hardware - ethernet	00:11:22:b2:b4:78;
+	fixed-address	10.8.13.21.9;
+}
+host- 10
+{
+	hardware - ethernet	00:11:22:bc:ed:29;
+	fixed-address	10.8.13.21.10;
+}
+host- 11
+{
+	hardware - ethernet	00:11:22:bc:bb:49;
+	fixed-address	10.8.13.21.11;
+}
+host- 12
+{
+	hardware - ethernet	00:11:22:bc:b8:bb;
+	fixed-address	10.8.13.21.12;
+}
+host- 13
+{
+	hardware - ethernet	Hello;
+	fixed-address	Hell;
+}
+host- 14
+{
+	hardware - ethernet	;
+	fixed-address	;
+}
